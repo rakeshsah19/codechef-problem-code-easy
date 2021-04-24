@@ -1,0 +1,12 @@
+# codechef-problem-code-easy
+# cook your dish here
+# codechef Problem Code:FLOW005
+l=[100,50,10,5,2,1]
+for i in range(int(input())):
+    n=int(input())
+    d=0
+    for j in l:
+        rem=n//j 
+        d+=rem
+        n=n%j
+    print(d)
