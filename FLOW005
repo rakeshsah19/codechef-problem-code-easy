@@ -1,0 +1,24 @@
+# codechef-problem-code-easy
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T;
+	cin>>T;
+	
+	while(T--){
+	    int money,notes = 0, mn[] = {100,50,10,5,2,1};
+	    cin>>money;
+	    
+	    for(int i=0;i<6;i++){
+	        notes += money/mn[i];
+	        money = money%mn[i];
+	        if(money == 0) break;
+	    }
+	    
+	    cout<<notes<<endl;
+	    
+	}
+	return 0;
+}
