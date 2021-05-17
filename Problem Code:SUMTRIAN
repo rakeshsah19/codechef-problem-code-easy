@@ -1,0 +1,34 @@
+# codechef-problem-code-easy
+Problem Code:SUMTRIAN
+
+/*codechef  Problem Code:SUMTRIAN*/
+#include <iostream>
+using namespace std;
+
+
+void triangle(){
+    int k;
+    cin>>k;
+    int arr[k][k];
+    for(int i=0;i<k;i++)
+    {
+        for(int j=0;j<i+1;j++)
+        cin>>arr[i][j];
+    }
+    for(int i=k-1;i>0;i--)
+    {
+        for(int j=0;j<i;j++)
+        arr[i-1][j]+=std::max(arr[i][j],arr[i][j+1]);
+    }
+    cout<<arr[0][0]<<"\n";
+}
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    triangle();
+	}
+	return 0;
+}
